@@ -15,37 +15,37 @@ namespace SIGMA.Models
         public int Id { get; set; }
 
         /// <summary>
-        /// Gets or sets the program name.
+        /// Gets or sets the first name.
         /// </summary>
         /// <value>
-        /// The name of the program.
+        /// The first name of the candidate.
         /// </value>
         [Required(ErrorMessage = "First Name is required")]
         public required string FirstName { get; set; }
 
         /// <summary>
-        /// Gets or sets the program name.
+        /// Gets or sets the last name.
         /// </summary>
         /// <value>
-        /// The name of the program.
+        /// The last name of the candidate.
         /// </value>
         [Required(ErrorMessage = "Last Name is required")]
 
         public required string LastName { get; set; }
 
         /// <summary>
-        /// Gets or sets the program name.
+        /// Gets or sets the phone no.
         /// </summary>
         /// <value>
-        /// The name of the program.
+        /// The phone no of the candidate.
         /// </value>
         public string? PhoneNo { get; set; }
 
         /// <summary>
-        /// Gets or sets the program name.
+        /// Gets or sets the email.
         /// </summary>
         /// <value>
-        /// The name of the program.
+        /// The email of the candidate.
         /// </value>
         [Required(ErrorMessage = "Email is required")]
         [EmailAddress(ErrorMessage = "Invalid email address")]
@@ -53,37 +53,37 @@ namespace SIGMA.Models
 
 
         /// <summary>
-        /// Gets or sets the program name.
+        /// Gets or sets the time to call.
         /// </summary>
         /// <value>
-        /// The name of the program.
+        /// The scheduled time to call .
         /// </value>
         public string? TimeToCall { get; set; }
 
 
         /// <summary>
-        /// Gets or sets the program name.
+        /// Gets or sets the linkedin address.
         /// </summary>
         /// <value>
-        /// The name of the program.
+        /// The linked url.
         /// </value>
         public string? LinkedIn { get; set; }
 
 
         /// <summary>
-        /// Gets or sets the program name.
+        /// Gets or sets the github address.
         /// </summary>
         /// <value>
-        /// The name of the program.
+        /// The github address.
         /// </value>
         public string? Github { get; set; }
 
 
         /// <summary>
-        /// Gets or sets the program name.
+        /// Gets or sets the comments.
         /// </summary>
         /// <value>
-        /// The name of the program.
+        /// The comments.
         /// </value>
         [Required(ErrorMessage = "Comments is required")]
         public required string FreeText { get; set; }
