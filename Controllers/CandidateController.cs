@@ -10,6 +10,7 @@ namespace SIGMA.Controllers
     public class CandidateController : ControllerBase
     {
         ICandidateInterface _candidateInterface;
+
         public CandidateController(ICandidateInterface service)
         {
             _candidateInterface = service;
@@ -22,16 +23,20 @@ namespace SIGMA.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("[action]")]
-        public IActionResult SaveCandidates([FromBody]Candidate candidateModel)
+        public ResponseModel SaveCandidates([FromBody]Candidate candidateModel)
         {
             try
             {
                 var model = _candidateInterface.SaveCandidate(candidateModel);
-                return Ok(model);
+                return model;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return BadRequest();
+                return new ResponseModel
+                {
+                    IsSuccess = false,
+                    Message = ex.Message
+                };
             }
         }
     }
